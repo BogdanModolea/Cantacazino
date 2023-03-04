@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="login.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Cantacazino</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Cantacazino</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <h5 id="credits"></h5>
+                </li>
+                <li>
+                    <a href="main.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="../Credits/credits.html">Credits</a>
+                </li>
+                <li>
+                    <a href="" id="logout-btn">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function(){
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+
+            content = document.querySelector(".wrapper");
+            content.classList.toggle("active");
+        }
+    </script>
+
+    <div class="wrapper">
+
+        <!-- <button id="logout-btn">Logout</button>
+        <h3 id="credits"></h3> -->
+
+
+
+        <h2><strong>All Games</strong></h2>
+    
+        <div class="cards">
+    
+            <a href="../Hot+Spinning/HotSpinning.html">
+                <figure class="card">
+        
+                    <img src="../images/Hot Spinning.jpg" />
+        
+                    <figcaption>Hot Spinning</figcaption>
+        
+                </figure>
+            </a>
+    
+            <a href="../Sliding+Numbers/SlidingNumbers.html">
+                <figure class="card">
+        
+                    <img src="../images/Sliding Numbers.jpg" />
+        
+                    <figcaption>Sliding Numbers</figcaption>
+        
+                </figure>
+            </a>    
+    
+            <a href="../Roulette/Roulette.html">
+                <figure class="card">
+        
+                    <img src="../images/Roulette.jpg" />
+        
+                    <figcaption>Roulette</figcaption>
+        
+                </figure>
+            </a>
+    
+            <a href="../Mines/Mines.html">
+                <figure class="card">
+        
+                    <img src="../images/Mines!.jpg" />
+        
+                    <figcaption>Mines!</figcaption>
+        
+                </figure>
+            </a>
+
+            <a href="../Keno/Keno.html">
+                <figure class="card">
+        
+                    <img src="../images/Keno.jpg" />
+        
+                    <figcaption>Keno</figcaption>
+        
+                </figure>
+            </a>
+
+            <a href="../Royale+Slots/RoyaleSlots.html">
+                <figure class="card">
+        
+                    <img src="../images/Royale Slots.jpg" />
+        
+                    <figcaption>Royale Slots</figcaption>
+        
+                </figure>
+            </a>
+    
+        </div>
+    
+    </div>
+
+</body>
+</html>

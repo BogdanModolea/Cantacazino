@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="index.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Cantacazino</div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="../Main/main.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+
+  <script>
+      hamburger = document.querySelector(".hamburger");
+      hamburger.onclick = function(){
+          navBar = document.querySelector(".nav-bar");
+          navBar.classList.toggle("active");
+
+          content = document.querySelector(".wrapper");
+          content.classList.toggle("active");
+      }
+  </script>
+
+
+    <div class='page_wrap'>
+      <div id='options_wrap'>
+        <span class='label'>Balance:</span>
+        <span id='credits'></span>
+        <span class='label'>Bombs:</span>
+        <ul class='options'>
+          <li id='1' class='selected'>x1</li>
+          <li id='3'>x3</li>
+          <li id='5'>x5</li>
+          <li id='24'>x24</li>
+        </ul>
+        <span class='label'>Bet Amount:</span>
+        <input type='number' id='bet_field' value='0'>
+        <button id='play_button'>Play</button>
+      </div>
+      <div class='game_wrap'>
+        <ul id='tiles'>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class='console_wrap'>
+        <span class='label'>Console:</span>
+        <div class='console'></div>
+      </div>
+      <div class='cashout_wrap'>
+        <span class='label' id='winnings_label'>+0</span>
+        <button id='cashout_button' class='disabled'>Cashout</button>
+      </div>
+    </div>
+  </body>
+</html>

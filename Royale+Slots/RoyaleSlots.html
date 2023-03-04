@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<title>Slot Machine</title>
+<script type="module" src="slots1.js"></script>
+<link rel="stylesheet" href="slot1.css">
+
+</head>
+<html>
+<!-- <body onload="toggleAudio()"> -->
+<body>
+
+	<header>
+        <div class="logo">Cantacazino</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <h5 id="credits"></h5>
+                </li>
+                <li>
+                    <a href="../Main/main.html">Back</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function(){
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+
+            content = document.querySelector(".wrapper");
+            content.classList.toggle("active");
+        }
+    </script>
+
+<main>
+	<section id="status">WELCOME!</section>
+	<h3 id="credits"></h3>
+	<section id="Slots">
+		<div id="slot1" class="a1"></div>
+		<div id="slot2" class="a1"></div>
+		<div id="slot3" class="a1"></div>
+	</section>
+	<section id="Gira">TAKE A SPIN!</section>
+	
+	<div class="container">
+		<div class="radio-title-group">
+
+			<div class="input-container">
+				<input id="bet1" type="radio" name="bet" value=1>
+				<div class="radio-title">
+					<label for="bet1">1</label>
+				</div>
+			</div>
+
+			<div class="input-container">
+				<input id="bet5" type="radio" name="bet" value=5>
+				<div class="radio-title">
+					<label for="bet5">5</label>
+				</div>
+			</div>
+
+			<div class="input-container">
+				<input id="bet10" type="radio" name="bet" value=10>
+				<div class="radio-title">
+					<label for="bet10">10</label>
+				</div>
+			</div>
+
+			<div class="input-container">
+				<input id="bet50" type="radio" name="bet" value=50>
+				<div class="radio-title">
+					<label for="bet50">50</label>
+				</div>
+			</div>
+
+			<section id="options">
+				<img src="res/icons/audioOn.png" id="audio" class="option"/>
+			</section>
+
+		</div>
+	</div>
+
+	
+</main>
+</body>
+</html>

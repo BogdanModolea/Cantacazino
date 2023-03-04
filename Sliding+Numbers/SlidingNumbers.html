@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="index.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+
+
+
+  <header>
+    <div class="logo">Cantacazino</div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+          <li>
+            <h5 id="credits"></h5>
+          </li>
+            <li>
+                <a href="../Main/main.html">Back</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<script>
+    hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function(){
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
+</script>
+
+
+
+
+<!--     
+    <div class="nav">
+  <nav><div class="holder">
+    <ul id="settings">
+      <li><a id="sitename" class="bi bi-suit-spade-fill" href="#"> Cantacazino</a>
+    <li></a><div style = "left:-130px; top:0px;" class="bi bi-currency-bitcoin" id="bal"> </li></a>
+    <li><a href="../main.html" class="bi bi-dpad-fill-"> Back </a>
+    </div>
+      </div>
+</nav> -->
+
+
+<div class="holder">
+      <div id="out">NUMBER</div>
+  <div class="roulette">
+    <div class="timer" id="timer"></div>
+    <div class="title">ROULETTE</div>
+    <div class="ticker"></div>
+    <div class="static">
+      <div class="scroll" id="scroll">
+        <div class="row">
+          <div class="box">0</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">10</div>
+          <div class="box">11</div>
+          <div class="box">12</div>
+          <div class="box">13</div>
+          <div class="box">14</div>
+          <div class="box">15</div>
+          <div class="box">16</div>
+          <div class="box">17</div>
+          <div class="box">18</div>
+          <div class="box">19</div>
+          <div class="box">20</div>
+          <div class="box">21</div>
+          <div class="box">22</div>
+          <div class="box">23</div>
+          <div class="box">24</div>
+          <div class="box">25</div>
+          <div class="box">26</div>
+          <div class="box">27</div>
+          <div class="box">28</div>
+        </div>
+        <div class="row">
+          <div class="box">0</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">10</div>
+          <div class="box">11</div>
+          <div class="box">12</div>
+          <div class="box">13</div>
+          <div class="box">14</div>
+          <div class="box">15</div>
+          <div class="box">16</div>
+          <div class="box">17</div>
+          <div class="box">18</div>
+          <div class="box">19</div>
+          <div class="box">20</div>
+          <div class="box">21</div>
+          <div class="box">22</div>
+          <div class="box">23</div>
+          <div class="box">24</div>
+          <div class="box">25</div>
+          <div class="box">26</div>
+          <div class="box">27</div>
+          <div class="box">28</div>
+        </div>
+        <div class="row">
+          <div class="box">0</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">10</div>
+          <div class="box">11</div>
+          <div class="box">12</div>
+          <div class="box">13</div>
+          <div class="box">14</div>
+          <div class="box">15</div>
+          <div class="box">16</div>
+          <div class="box">17</div>
+          <div class="box">18</div>
+          <div class="box">19</div>
+          <div class="box">20</div>
+          <div class="box">21</div>
+          <div class="box">22</div>
+          <div class="box">23</div>
+          <div class="box">24</div>
+          <div class="box">25</div>
+          <div class="box">26</div>
+          <div class="box">27</div>
+          <div class="box">28</div>
+        </div>
+        <div class="row">
+          <div class="box">0</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">10</div>
+          <div class="box">11</div>
+          <div class="box">12</div>
+          <div class="box">13</div>
+          <div class="box">14</div>
+          <div class="box">15</div>
+          <div class="box">16</div>
+          <div class="box">17</div>
+          <div class="box">18</div>
+          <div class="box">19</div>
+          <div class="box">20</div>
+          <div class="box">21</div>
+          <div class="box">22</div>
+          <div class="box">23</div>
+          <div class="box">24</div>
+          <div class="box">25</div>
+          <div class="box">26</div>
+          <div class="box">27</div>
+          <div class="box">28</div>
+        </div>
+        <div class="row">
+          <div class="box">0</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">10</div>
+          <div class="box">11</div>
+          <div class="box">12</div>
+          <div class="box">13</div>
+          <div class="box">14</div>
+          <div class="box">15</div>
+          <div class="box">16</div>
+          <div class="box">17</div>
+          <div class="box">18</div>
+          <div class="box">19</div>
+          <div class="box">20</div>
+          <div class="box">21</div>
+          <div class="box">22</div>
+          <div class="box">23</div>
+          <div class="box">24</div>
+          <div class="box">25</div>
+          <div class="box">26</div>
+          <div class="box">27</div>
+          <div class="box">28</div>
+        </div>
+        <div class="row">
+          <div class="box">0</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">10</div>
+          <div class="box">11</div>
+          <div class="box">12</div>
+          <div class="box">13</div>
+          <div class="box">14</div>
+          <div class="box">15</div>
+          <div class="box">16</div>
+          <div class="box">17</div>
+          <div class="box">18</div>
+          <div class="box">19</div>
+          <div class="box">20</div>
+          <div class="box">21</div>
+          <div class="box">22</div>
+          <div class="box">23</div>
+          <div class="box">24</div>
+          <div class="box">25</div>
+          <div class="box">26</div>
+          <div class="box">27</div>
+          <div class="box">28</div>
+        </div>
+        <div class="row">
+          <div class="box">0</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">10</div>
+          <div class="box">11</div>
+          <div class="box">12</div>
+          <div class="box">13</div>
+          <div class="box">14</div>
+          <div class="box">15</div>
+          <div class="box">16</div>
+          <div class="box">17</div>
+          <div class="box">18</div>
+          <div class="box">19</div>
+          <div class="box">20</div>
+          <div class="box">21</div>
+          <div class="box">22</div>
+          <div class="box">23</div>
+          <div class="box">24</div>
+          <div class="box">25</div>
+          <div class="box">26</div>
+          <div class="box">27</div>
+          <div class="box">28</div>
+        </div>
+        <div class="row">
+          <div class="box">0</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">10</div>
+          <div class="box">11</div>
+          <div class="box">12</div>
+          <div class="box">13</div>
+          <div class="box">14</div>
+          <div class="box">15</div>
+          <div class="box">16</div>
+          <div class="box">17</div>
+          <div class="box">18</div>
+          <div class="box">19</div>
+          <div class="box">20</div>
+          <div class="box">21</div>
+          <div class="box">22</div>
+          <div class="box">23</div>
+          <div class="box">24</div>
+          <div class="box">25</div>
+          <div class="box">26</div>
+          <div class="box">27</div>
+          <div class="box">28</div>
+        </div>
+      </div>
+    </div>
+    <div class="history">
+      <div class="history-title">HISTORY</div>
+      <div id="h"></div>
+    </div>
+  </div>
+  <div class="bet">
+    <div class="bet-title">BASIC BETS<div id="info" style="float: right"></div></div>
+    <input type="number"  onkeydown="if(event.key==='.'){event.preventDefault();}" onpaste="let pasteData = event.clipboardData.getData('text'); if(pasteData){pasteData.replace(/[^0-9]*/g,'');}" id="bet" value="0" />
+    <div class="bets-holder">
+            <button id="max" class="betting-buttonmax" >Max</button>
+      <button id="add10" class="betting-button" >+10</button>         <button id="add100" class="betting-button">+100</button> 
+      <button id="add1000" class="betting-button" >+1000</button>
+      <br>
+      <div id="red-box" class="boxes">0</div>
+      <div id="green-box" class="boxes">0</div>
+      <div id="black-box" class="boxes">0</div>
+    </div>
+    <div class="button-holder">
+      <br>
+      <button id="red">RED</button>
+      <button id="green">GREEN</button>  
+      <button id="black">BLACK</button>  
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

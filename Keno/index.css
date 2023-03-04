@@ -1,0 +1,235 @@
+body {
+	font-family:sans-serif;
+	font-size:24px;
+	background-color:#24282f;
+	box-sizing:border-box
+}
+.wrapper {
+	margin: 3% auto auto auto;
+	position:relative;
+	border:1px solid #24282f;
+	width:960px;
+	background-color:#1a1e24;
+	display:flex;
+	flex-direction:column;
+	/* margin:auto; */
+}
+#msg {
+	padding:.5em;
+	color: #fefefe;
+}
+
+.num-wrapper {display:flex;height:550px;padding:.5em}
+
+#pay-table {display:flex;flex:1;margin-right:6px;}
+#numbers {display:flex;flex:4}
+#winningNumbers {
+	display:flex;
+	flex-wrap:wrap;
+	width:120px;
+	padding:0 .1em;
+	flex-direction:column-reverse;
+	justify-content:flex-start;
+	background-color: #24282f;
+}
+/* #winningNumbers > span {} */
+
+table {border-collapse:collapse;width:100%;}
+td {position:relative;height:48px;border:1px solid #667;cursor:pointer;text-align:center;}
+#numbers td {
+	height:54px;
+	background-color:#1a1e24;
+	color:#fefefe;
+}
+
+	
+.btn-wrapper {display:flex;justify-content:space-between;padding:.5em}
+button {width:72px;height:64px;font-size:22px;}
+
+#numbers .selected::after {
+	position:absolute;
+	top:20%;
+	left:10px;
+	width:42px;
+	height:42px;
+	background-color:#fefefe;
+	border-radius:50%;
+	content:'X';
+	color:#1a1e24;
+	line-height:42px;
+	font-weight:900}
+#numbers .winning {
+	background-color:red
+}
+#numbers .win-selected {
+	background-color:red
+}
+
+span {
+	width:44px;
+	height:44px;
+	border:1px solid #555;
+	border-radius:50%;
+	margin:.18em 0.25em;
+	text-align:center;
+	line-height:44px;
+	color: #fefefe;
+}
+
+#winCredits {
+	border:1px solid #333;
+	min-width:96px;
+	height:64px;
+	font-size:48px;
+	text-align:center;
+	line-height:64px;
+	color: #fefefe;
+}
+#playerCredits {
+	border:1px solid #333;
+	min-width:96px;
+	height:64px;
+	font-size:48px;
+	text-align:center;
+	line-height:64px;
+	color: #fefefe;
+	background-color: #24282f;
+}
+
+#overlay {display:none;position:absolute;width:100%;height:100%;background-color:transparent}
+
+#gameover {display:none;position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.5)}
+#gameover::after {position:absolute;background-color:black;width:80%;left:10%;height:30%;top:35%;content:'CREDITS: 0';
+	color:#ddd;font-size:54px;display:flex;justify-content:center;align-items:center}
+
+td, p, span, button, #winCredits, #playerCredits {user-select:none}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	/* box-sizing: border-box; */
+}
+
+header{
+	width: 100%;
+	height: 80px;
+	background: #1a1e24;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 100px;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+  }
+  
+  .logo{
+	font-size: 28px;
+	font-weight: bold;
+	color: #fefefe;
+  }
+  
+  .hamburger{
+	display: none;
+  }
+  
+  .nav-bar ul{
+	display: flex;
+  }
+  
+  .nav-bar ul li a{
+	display: block;
+	color: #fefefe;
+	font-size: 20px;
+	padding: 10px 25px;
+	border-radius: 50px;
+	transition: 0.2s;
+	margin: 0 5px;
+  }
+  
+  .nav-bar ul li a:hover{
+	color: #1a1e24;
+	background: #fefefe;
+  }
+  
+  .nav-bar ul li a.active{
+	color: #1a1e24;
+	background: #fefefe;
+  }
+  
+  #credits{
+	display: block;
+	color: #fefefe;
+	font-size: 20px;
+	padding: 10px 25px;
+	border-radius: 50px;
+	transition: 0.2s;
+	margin: 0 5px;
+	color: #fefefe;
+  }
+  
+  #credits:hover{
+	color: #1a1e24;
+	background: #fefefe;
+  }
+  
+  @media only screen and (max-width: 1320px) {
+	header{
+	  padding: 0 50px;
+	}
+  }
+  
+  @media only screen and (max-width: 1100px) {
+	header{
+	  padding: 0 30px;
+	}
+  }
+  
+  @media only screen and (max-width: 900px) {
+	.hamburger{
+	  display: block;
+	  cursor: pointer;
+	}
+  
+	.hamburger .line{
+	  width: 30px;
+	  height: 3px;
+	  background: #fefefe;
+	  margin: 6px 0;
+	}
+  
+	.nav-bar{
+	  height: 0;
+	  position: absolute;
+	  top: 80px;
+	  left: 0;
+	  right: 0;
+	  width: 100vw;
+	  background: #1a1e24;
+	  transition: 0.5s;
+	  overflow: hidden;
+	}
+  
+	.nav-bar.active{
+	  height: 450px;
+	}
+  
+	.nav-bar ul{
+	  display: block;
+	  width: fit-content;
+	  margin: 80px auto 0 auto;
+	  text-align: center;
+	  transition: 0.5s;
+	  opacity: 0;
+	}
+  
+	.nav-bar.active ul{
+	  opacity: 1;
+	}
+  
+	.nav-bar ul li a{
+	  margin-bottom: 12px;
+	}
+  }
